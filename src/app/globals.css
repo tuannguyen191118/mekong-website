@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --brand-orange: #f39a1e;
+  --brand-dark: #071827;
+  --brand-light: #f7f7f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav,
+button {
+  font-family: var(--font-montserrat), Arial, sans-serif;
+}
+
+button,
+a {
+  transition: all 0.25s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--brand-orange);
+  color: white;
+}
+/* Smooth UI polish */
+body {
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+.card-soft {
+  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  border-radius: 18px;
+}
+
+.card-soft:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+}
+
+.btn-primary {
+  background: var(--brand-orange);
+  color: white;
+  font-weight: 800;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(243, 154, 30, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.96);
+}
+
+.btn-outline {
+  border: 2px solid var(--brand-dark);
+  color: var(--brand-dark);
+  background: white;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.btn-outline:hover {
+  background: var(--brand-dark);
+  color: white;
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #f39a1e 0%, #ff7a00 100%);
+}
+
+.dark-gradient {
+  background: linear-gradient(135deg, #071827 0%, #0f2538 100%);
+}
