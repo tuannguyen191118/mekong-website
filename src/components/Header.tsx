@@ -28,13 +28,36 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const menuItems = [
-    "Trang chủ",
-    "Giới thiệu",
-    "Dịch vụ",
-    "Sản phẩm",
-    "Đối tác",
-    "Liên hệ",
-  ];
+  {
+    label: "Trang chủ",
+    href: "/",
+  },
+
+  {
+    label: "Giới thiệu",
+    href: "/#giới-thiệu",
+  },
+
+  {
+    label: "Sản phẩm",
+    href: "/products",
+  },
+
+  {
+    label: "Dịch vụ",
+    href: "/services",
+  },
+
+  {
+    label: "Đối tác",
+    href: "/#đối-tác",
+  },
+
+  {
+    label: "Liên hệ",
+    href: "/#liên-hệ",
+  },
+];
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 shadow-sm backdrop-blur-xl">
@@ -43,16 +66,16 @@ export default function Header() {
 
         <nav className="hidden items-center gap-10 text-sm font-bold uppercase md:flex">
           {menuItems.map((item, index) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replaceAll(" ", "-")}`}
+  <a
+    key={item.label}
+              href={item.href}
               className={
                 index === 0
                   ? "text-orange-500"
                   : "text-slate-900 hover:text-orange-500"
               }
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </nav>
@@ -73,11 +96,11 @@ export default function Header() {
         <div className="grid gap-3 border-t bg-white px-5 py-4 text-sm font-bold uppercase md:hidden">
           {menuItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().replaceAll(" ", "-")}`}
+              key={item.label}
+              href={item.href}
               onClick={() => setOpenMenu(false)}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
