@@ -7,9 +7,9 @@ import MobileCTA from "../../components/MobileCTA";
 import Contact from "../../components/Contact";
 import { services } from "../../data/siteData";
 import { CheckCircle2, Phone } from "lucide-react";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 
-export default function ServicesPage() {
+function ServicesContent() {
   const searchParams = useSearchParams();
   const tabFromUrl = searchParams.get("tab");
 
@@ -185,5 +185,12 @@ export default function ServicesPage() {
       <Footer />
       <MobileCTA />
     </main>
+  );
+}
+export default function ServicesPage() {
+  return (
+    <Suspense fallback={<div className="p-10">Đang tải dịch vụ...</div>}>
+      <ServicesContent />
+    </Suspense>
   );
 }
