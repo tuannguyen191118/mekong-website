@@ -16,6 +16,7 @@ const categories = [
 
 const products = [
   {
+    slug: "hop-my-pham",
     name: "Hộp mỹ phẩm cao cấp",
     category: "Hộp giấy",
     desc: "Thiết kế hộp giấy sang trọng dành cho mỹ phẩm và quà tặng thương hiệu.",
@@ -23,13 +24,15 @@ const products = [
       "/images/products/hop-my-pham.jpg",
   },
   {
-    name: "Bao bì thực phẩm",
+    slug: "bao-bi-thuc-pham",
+    name: "Bao bì thực phẩm",
     category: "Bao bì thực phẩm",
     desc: "Bao bì thực phẩm phong cách hiện đại, phù hợp cafe và F&B.",
     image:
       "/images/products/bao-bi-ca-phe.png",
   },
   {
+    slug: "tem-nhan-chai-lo",
     name: "Tem nhãn chai lọ",
     category: "Tem nhãn",
     desc: "Tem nhãn sắc nét, chống nước, phù hợp chai lọ mỹ phẩm.",
@@ -37,6 +40,7 @@ const products = [
       "/images/products/tem-nhan.jpg",
   },
   {
+    slug: "tui-giay-thuong-hieu",
     name: "Túi giấy thương hiệu",
     category: "Túi giấy",
     desc: "Túi giấy thương hiệu dành cho thời trang và retail.",
