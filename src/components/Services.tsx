@@ -53,9 +53,10 @@ export default function Services() {
                   {service.desc}
                 </p>
 
-                <button className="mt-5 flex items-center gap-2 text-sm font-bold uppercase text-orange-500">
+                <a  href={`/services?tab=${service.slug}`}
+                className="mt-5 flex items-center gap-2 text-sm font-bold uppercase text-orange-500"                >
                   Xem thêm →
-                </button>
+                </a>
               </div>
             );
           })}
